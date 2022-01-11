@@ -29,6 +29,11 @@ def createThreadings():
 		Thread(target=lambda: attack("delete")).start()
 		Thread(target=lambda: attack("options")).start()
 		Thread(target=lambda: attack("post")).start()
+                Thread(target=lambda: attack("head")).start()
+		Thread(target=lambda: attack("connect")).start()
+		Thread(target=lambda: attack("trace")).start()
+		Thread(target=lambda: attack("path")).start()
+		Thread(target=lambda: attack("/")).start()
 	except:
 		breakFlag = True
 
